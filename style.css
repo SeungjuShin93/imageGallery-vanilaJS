@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+}
+
+body.dark {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+}
+.wrapper h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container {
+  width: 50%;
+  margin: 0 auto;
+  /* overflow 안주면 border-radius가 안됨
+  사실 더 원하는거는 그냥 container 박스에
+  border-radius를 편하게 주고 싶은데 그게 안됨 */
+  overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.main-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  /* overflow 안주면 border-radius가 안됨 */
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.main-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  color: black;
+}
+
+.main-btn {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  width: 90px;
+  padding: 10px 0;
+  background-color: rgba(150, 150, 150, 0.6);
+  color: black;
+}
+.main-overlay.dark,
+.main-btn.dark {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+.main-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-container {
+  display: flex;
+  width: 100%;
+}
+.sub-container img {
+  width: 20%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+  .wrapper h1 {
+    font-size: 1.5rem;
+  }
+  .main-container {
+    height: 40vh;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 70%;
+  }
+  .wrapper h1 {
+    font-size: 1.2rem;
+  }
+  .main-container {
+    height: 30vh;
+  }
+}
