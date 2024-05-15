@@ -1,4 +1,4 @@
-const body = document.querySelector('body');
+const body = document.getElementById('body');
 const overlay = document.getElementById('overlay');
 const mainBtn = document.getElementById('main-btn');
 const mainImg = document.getElementById('main-img');

@@ -25,22 +25,14 @@ body.dark {
 .container {
   width: 50%;
   margin: 0 auto;
-  /* overflow 안주면 border-radius가 안됨
-  사실 더 원하는거는 그냥 container 박스에
-  border-radius를 편하게 주고 싶은데 그게 안됨 */
   overflow: hidden;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
 }
 
 .main-container {
   position: relative;
   width: 100%;
   height: 50vh;
-  /* overflow 안주면 border-radius가 안됨 */
-  overflow: hidden;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
 }
 
 .main-overlay {
